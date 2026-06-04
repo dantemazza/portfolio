@@ -41,5 +41,10 @@ yarn-error.log*
 next-env.d.ts
 
 personal-website/
-CLAUDE.md
 assets/
+
+# resume build artifacts (the published copy lives at public/resume/)
+resume/resume.pdf
+resume/*.aux
+resume/*.log
+resume/*.out

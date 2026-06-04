@@ -1,0 +1,118 @@
+%==============================================================================
+% Dante Mazza — Resume
+% ATS-friendly, single-column, selectable text. Build with: ./build.sh
+%==============================================================================
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{linknavy}{HTML}{1A5276}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=linknavy, linkcolor=linknavy}
+\usepackage{parskip}
+\setlength{\parskip}{2pt}
+
+\pagestyle{empty}
+
+% --- Section headings: simple, uppercase, ruled (ATS reads these as headers) ---
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{5pt}
+
+% --- Helper commands ----------------------------------------------------------
+% Single-role entry: company + location on one line, title + dates below
+\newcommand{\role}[4]{%
+  \noindent\textbf{#1}\hfill #2\\[1pt]%
+  \textit{#3}\hfill \textit{#4}\par%
+}
+
+% Company header (for an employer with multiple stacked roles)
+\newcommand{\company}[2]{%
+  \noindent\textbf{#1}\hfill #2\par%
+}
+
+% Role line under a \company (title + dates)
+\newcommand{\subrole}[2]{%
+  \noindent\textit{#1}\hfill \textit{#2}\par%
+}
+
+% Compact bullet list
+\newenvironment{bullets}{%
+  \begin{itemize}[leftmargin=1.5em,topsep=2pt,itemsep=1pt,parsep=0pt]%
+}{\end{itemize}}
+
+\setlength{\parindent}{0pt}
+
+%==============================================================================
+\begin{document}
+
+% ----- Header -----------------------------------------------------------------
+\begin{center}
+  {\fontsize{32}{34}\selectfont \textbf{Dante Mazza}}\\[3pt]
+  {\small 425-542-4364 $\cdot$ \href{mailto:dantemazza1@gmail.com}{dantemazza1@gmail.com} $\cdot$ \href{https://dantemazza.com}{dantemazza.com}\\[1pt]
+  \href{https://github.com/dantemazza}{github.com/dantemazza} $\cdot$ \href{https://www.linkedin.com/in/dante-mazza}{linkedin.com/in/dante-mazza}}
+\end{center}
+
+% ----- Skills -----------------------------------------------------------------
+\section{Skills}
+\textbf{Languages:} Python, Java, Scala, Kotlin, C, C++, SQL\\
+\textbf{Frameworks \& Data:} Spring Boot, Flask, FastAPI, Spark, Hadoop, Delta Lake, Iceberg, Redis, Kafka\\
+\textbf{Infrastructure:} AWS (EMR, EC2, RDS, Lambda, Step Functions), Docker, Kubernetes, Terraform, Prometheus, Linux\\
+\textbf{Tools:} Git, CI/CD (GitLab, GitHub Actions), Claude Code, MCP
+
+% ----- Experience -------------------------------------------------------------
+\section{Experience}
+
+\company{Splunk}{Toronto, Canada}
+\subrole{Software Engineer II}{Oct 2024 -- Present}
+\begin{bullets}
+  \item Developing scalable, performant (50 TB/day) AWS-hosted Kubernetes + Java/Spring microservices with PostgreSQL/RDS, SQS, Prometheus, GitLab CI/CD, and Terraform.
+  \item Technical lead on an 8 month+ rearchitecture of a Spark ML security detection platform. Designed the data lake, ETL pipeline with feature store, and CI/CD build process, and ran performance PoCs on Parquet writer configs, Delta/Iceberg, and feature computation on EMR.
+  \item Led implementation across 3 engineers and 5 partner teams, improved MTTD 90\% (30 to 3 hours), and shipped 1 month ahead of schedule. Mentored 5+ junior engineers and interns.
+\end{bullets}
+
+\subrole{Software Engineer I}{Jul 2023 -- Oct 2024}
+\begin{bullets}
+  \item Built and maintained Spark/Scala batch pipelines using Delta Lake on S3, AWS EMR, and Step Functions to process 1PB+ of logs (VPN, Windows, cloud storage), detecting anomalies across 30M+ users and devices daily.
+  \item Designed and implemented an E2E ML model testing framework (Python, AWS, GitLab CI/CD) and advocated for its adoption, cutting testing and deployment time 98\%, from weeks to hours.
+  \item Cut team AWS costs 30\% (\$150K/year) by optimizing Spark/Scala ETL pipelines (Glue, Kinesis, Delta Lake) and downstream Spark ML jobs on EMR through performance tuning and code optimization.
+\end{bullets}
+
+\subrole{Software Engineer Intern}{Jan 2022 -- Apr 2022}
+\begin{bullets}
+  \item Prototyped multi-tenant Spark job execution with AWS (EMR, IAM, STS, Step Functions, Lambda), Terraform, Python, Docker, and Java/Spring. Automated tenant provisioning with shell + GitLab/internal APIs, saving 6 hours of onboarding per customer.
+\end{bullets}
+
+\vspace{3pt}
+\role{Amazon Web Services (Keyspaces)}{Bellevue, WA}{Software Development Engineer Intern}{Aug 2022 -- Dec 2022}
+\begin{bullets}
+  \item Authored a transactional query service in Kotlin using internal AWS services for a managed Cassandra product. Researched open-source Cassandra batch-query functionality and designed for parity.
+\end{bullets}
+
+\vspace{3pt}
+\role{Wisedocs}{Toronto, Canada}{Machine Learning Engineer}{May 2020 -- Sep 2021}
+\begin{bullets}
+  \item Implemented and optimized ML models (CNNs with TensorFlow/Keras, NLP with Hugging Face, k-means with scikit-learn) for a 2x accuracy improvement. Built Python document clustering that cut prediction time 85\%, and a pre-serialized Keras batch-training method that cut training time 90\%.
+\end{bullets}
+
+% ----- Projects ---------------------------------------------------------------
+\section{Projects}
+
+\role{Shipsolver}{\href{https://shipsolver.com}{shipsolver.com}}{Sole maintainer of a freight-forwarding B2B suite}{Oct 2025 -- Present}
+\begin{bullets}
+  \item Building and operating a multi-tenant backoffice platform (2 active customers): automated invoice generation, payroll and driver-compliance management, and user governance. Built with Python/FastAPI, GitHub Actions CI/CD, and AWS (RDS, EC2). Custom Claude Code worktree harness enables parallel local development and rapid feature work.
+\end{bullets}
+
+\vspace{3pt}
+\role{Tricks \& Trumps}{\href{https://tricksandtrumps.com}{tricksandtrumps.com}}{Real-time multiplayer rubber bridge}{Jan 2024 -- Present}
+\begin{bullets}
+  \item Built a real-time multiplayer web app for rubber bridge focused on competitive play and an intuitive scorekeeping interface.
+\end{bullets}
+
+% ----- Education --------------------------------------------------------------
+\section{Education}
+\noindent\textbf{University of Waterloo}, BASc in Computer Engineering \hfill Sep 2018 -- May 2023\\
+Dean's Honour List (first year). Relevant coursework: Distributed Systems, Compilers, Operating Systems, Networks.
+
+\end{document}
