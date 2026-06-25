@@ -4,7 +4,7 @@ import { projects } from '@/lib/data/projects';
 
 export const metadata: Metadata = {
   title: 'Projects | Dante Mazza',
-  description: 'Personal projects including Shipsolver and tricksandtrumps.',
+  description: 'Personal projects including ShipSolver and tricksandtrumps.',
 };
 
 export default function ProjectsPage() {

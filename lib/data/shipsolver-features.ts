@@ -1,10 +1,10 @@
-export interface ShipsolverFeature {
+export interface ShipSolverFeature {
   name: string;
   description: string;
   image: string | null;
 }
 
-export const shipsolverFeatures: ShipsolverFeature[] = [
+export const shipsolverFeatures: ShipSolverFeature[] = [
   {
     name: 'Dashboard',
     description: 'Revenue analytics dashboard displaying total revenue, POD counts, and zone-based performance metrics with interactive charts and tables. Filters by time period (1w, 1m, 3m, 1y, all) and invoice status with stacked bar visualizations.',

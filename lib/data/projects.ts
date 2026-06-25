@@ -3,12 +3,12 @@ import { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     id: 'shipsolver',
-    title: 'Shipsolver',
+    title: 'ShipSolver',
     slug: 'shipsolver',
     period: 'Oct 2025 - Present',
     shortDescription: 'An intelligent freight forwarding management platform that automates invoicing and document processing.',
     fullDescription: [
-      'Shipsolver is an intelligent freight forwarding management platform that automates the entire invoicing lifecycle from delivery documentation to payment tracking.',
+      'ShipSolver is an intelligent freight forwarding management platform that automates the entire invoicing lifecycle from delivery documentation to payment tracking.',
       'The system uses AI to extract critical shipping information from scanned documents, eliminating manual data entry while providing comprehensive tools for rate management, customer billing, and financial operations.',
       'It handles multi-tenant operations with role-based access controls, enabling freight forwarders to manage their entire back-office workflow—from proof of delivery processing to invoice generation and payment reconciliation—in a single centralized platform.',
     ],

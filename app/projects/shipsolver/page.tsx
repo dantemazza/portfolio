@@ -7,11 +7,11 @@ import { shipsolverFeatures } from '@/lib/data/shipsolver-features';
 const project = projects.find((p) => p.slug === 'shipsolver')!;
 
 export const metadata: Metadata = {
-  title: 'Shipsolver | Dante Mazza',
+  title: 'ShipSolver | Dante Mazza',
   description: project.shortDescription,
 };
 
-export default function ShipsolverPage() {
+export default function ShipSolverPage() {
   return (
     <div className="py-8">
       {/* Back link */}
@@ -26,7 +26,7 @@ export default function ShipsolverPage() {
       <div className="code-card p-6 mb-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-[#c9d1d9]">Shipsolver</h1>
+            <h1 className="text-3xl font-bold text-[#c9d1d9]">ShipSolver</h1>
             <p className="text-[#8b949e] mt-1">{project.period}</p>
           </div>
           <div className="text-right">
@@ -98,7 +98,7 @@ export default function ShipsolverPage() {
       {/* Footer */}
       <div className="mt-12 code-card p-6 text-center">
         <p className="text-[#8b949e] text-sm mb-3">
-          Want to try Shipsolver? Shoot me an email
+          Want to try ShipSolver? Shoot me an email
         </p>
         <a
           href="mailto:dante@shipsolver.com"
