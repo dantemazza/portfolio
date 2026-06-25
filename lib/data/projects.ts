@@ -2,13 +2,13 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
-    id: 'shiplite',
-    title: 'ShipLite',
-    slug: 'shiplite',
+    id: 'shipsolver',
+    title: 'Shipsolver',
+    slug: 'shipsolver',
     period: 'Oct 2025 - Present',
     shortDescription: 'An intelligent freight forwarding management platform that automates invoicing and document processing.',
     fullDescription: [
-      'ShipLite is an intelligent freight forwarding management platform that automates the entire invoicing lifecycle from delivery documentation to payment tracking.',
+      'Shipsolver is an intelligent freight forwarding management platform that automates the entire invoicing lifecycle from delivery documentation to payment tracking.',
       'The system uses AI to extract critical shipping information from scanned documents, eliminating manual data entry while providing comprehensive tools for rate management, customer billing, and financial operations.',
       'It handles multi-tenant operations with role-based access controls, enabling freight forwarders to manage their entire back-office workflow—from proof of delivery processing to invoice generation and payment reconciliation—in a single centralized platform.',
     ],
@@ -17,7 +17,7 @@ export const projects: Project[] = [
       'AI-powered document extraction from scanned delivery documents',
       'Multi-tenant architecture with role-based access controls',
       'Complete invoicing lifecycle management',
-      'Currently supporting a $2.5M annual revenue freight-forwarding operation',
+      '2 active customers',
     ],
     images: [
       '/images/projects/shiplite/shiplite_landing.png',
@@ -27,6 +27,7 @@ export const projects: Project[] = [
       '/images/projects/shiplite/shiplite_uploadpods.png',
       '/images/projects/shiplite/shiplite_settings.png',
     ],
+    liveUrl: 'https://shipsolver.com',
   },
   {
     id: 'tricksandtrumps',

@@ -2,17 +2,16 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from '@/lib/data/projects';
-import { shipliteFeatures } from '@/lib/data/shiplite-features';
-import { CONTACT_EMAIL } from '@/lib/constants';
+import { shipsolverFeatures } from '@/lib/data/shipsolver-features';
 
-const project = projects.find((p) => p.slug === 'shiplite')!;
+const project = projects.find((p) => p.slug === 'shipsolver')!;
 
 export const metadata: Metadata = {
-  title: 'ShipLite | Dante Mazza',
+  title: 'Shipsolver | Dante Mazza',
   description: project.shortDescription,
 };
 
-export default function ShipLitePage() {
+export default function ShipsolverPage() {
   return (
     <div className="py-8">
       {/* Back link */}
@@ -27,7 +26,7 @@ export default function ShipLitePage() {
       <div className="code-card p-6 mb-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-[#c9d1d9]">ShipLite</h1>
+            <h1 className="text-3xl font-bold text-[#c9d1d9]">Shipsolver</h1>
             <p className="text-[#8b949e] mt-1">{project.period}</p>
           </div>
           <div className="text-right">
@@ -62,7 +61,7 @@ export default function ShipLitePage() {
       <div className="space-y-12">
         <h2 className="text-2xl font-bold text-[#c9d1d9]">Feature Walkthrough</h2>
 
-        {shipliteFeatures.map((feature, idx) => (
+        {shipsolverFeatures.map((feature, idx) => (
           <div key={feature.name} className="code-card overflow-hidden">
             {/* Feature header */}
             <div className="p-4 border-b border-[#30363d]">
@@ -99,10 +98,10 @@ export default function ShipLitePage() {
       {/* Footer */}
       <div className="mt-12 code-card p-6 text-center">
         <p className="text-[#8b949e] text-sm mb-3">
-          Want to try Shiplite? Shoot me an email
+          Want to try Shipsolver? Shoot me an email
         </p>
         <a
-          href={`mailto:${CONTACT_EMAIL}`}
+          href="mailto:dante@shipsolver.com"
           className="inline-flex items-center gap-2 px-4 py-2 bg-[#238636] hover:bg-[#2ea043] text-white rounded-md transition-colors text-sm"
         >
           Contact Me
